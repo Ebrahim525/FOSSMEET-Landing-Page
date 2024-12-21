@@ -1,0 +1,262 @@
+/* Root variables for theme colors */
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --accent-color: #ff7f00;
+  --hover-bg-color: #ddc0a4;
+  --hover-text-color: #000;
+  --card-bg-color: #111;
+}
+
+/* Light mode variables */
+.light-mode {
+  --bg-color: #fff;
+  --text-color: #000;
+  --accent-color: #007bff;
+  --hover-bg-color: #dce4f2;
+  --hover-text-color: #007bff;
+  --card-bg-color: #f8f9fa;
+}
+
+/* General styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DejaVu Sans Mono", monospace;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 95%;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+nav {
+  width: 35%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+  align-items: center;
+}
+
+nav ul li {
+  color: var(--text-color);
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+nav > ul > li:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.6s;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  background: url(./image.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: var(--text-color);
+}
+
+.home h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.home p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.home .cta {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cta button {
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cta .register {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.cta .explore {
+  background-color: var(--text-color);
+  color: var(--accent-color);
+}
+
+.cta button:hover {
+  transform: scale(1.1);
+}
+
+main {
+  padding: 20px;
+}
+
+main div {
+  padding: 30px;
+  color: inherit;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 5vh;
+}
+
+main div p,
+main div ul {
+  line-height: 1.8;
+}
+
+.about {
+  text-align: center;
+  max-width: 1400px;
+  border-bottom: 5px solid var(--accent-color);
+}
+
+.faq {
+  text-align: center;
+  border-top: 5px solid var(--accent-color);
+  margin-top: 30px;
+  padding-top: 0px;
+  border-bottom: 5px solid var(--accent-color);
+  line-height: 1.5;
+}
+
+.hide {
+  display: none;
+  color: var(--accent-color);
+}
+
+.faq h3 {
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+}
+
+.email,
+.phone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 3vh;
+}
+
+.gallery {
+  text-align: center;
+  border-top: 5px solid var(--accent-color);
+}
+
+.image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px var(--text-color);
+  transition: transform 0.4s ease-in-out;
+}
+
+.events {
+  max-width: fit-content;
+  margin-inline: auto;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-text-color);
+}
+
+
+.e1, h2{
+  display: inline;
+}
+.e1, .e2{
+  max-height: 3vh;
+}
+
+main div:not(:first-of-type){
+  margin: 0 auto;
+  padding-top: 80px;
+  width: 1000px;
+}
