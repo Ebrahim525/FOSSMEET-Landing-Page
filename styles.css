@@ -1,4 +1,3 @@
-/* Root variables for theme colors */
 :root {
   --bg-color: #000;
   --text-color: #fff;
@@ -8,7 +7,7 @@
   --card-bg-color: #111;
 }
 
-/* Light mode variables */
+
 .light-mode {
   --bg-color: #fff;
   --text-color: #000;
@@ -18,12 +17,14 @@
   --card-bg-color: #f8f9fa;
 }
 
-/* General styles */
+
 * {
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: "DejaVu Sans Mono", monospace;
   margin: 0;
   background-color: var(--bg-color);
@@ -91,7 +92,7 @@ nav > ul > li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 200px;
   background: url(./image.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -113,6 +114,7 @@ nav > ul > li:hover {
   gap: 20px;
   margin-top: 20px;
 }
+
 
 .cta button {
   padding: 15px 30px;
@@ -158,7 +160,6 @@ main div ul {
 
 .about {
   text-align: center;
-  max-width: 1400px;
   border-bottom: 5px solid var(--accent-color);
 }
 
@@ -257,6 +258,26 @@ footer {
 
 main div:not(:first-of-type){
   margin: 0 auto;
-  padding-top: 80px;
-  width: 1000px;
+  padding-top: 100px;
+  width: 60%;
+}
+
+@media (max-width: 768px){
+  .home{
+    padding-top: 300px;
+    background: linear-gradient(#000, #ff7f00);
+  }
+  header{
+    display: block;
+  }
+  header *{
+    width: 100%;
+  }
+  header button{
+    width: 50%;
+  }
+  .gallery img:first-of-type{
+    display: none;
+  }
+  
 }
