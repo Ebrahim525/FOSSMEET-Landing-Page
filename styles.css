@@ -231,7 +231,6 @@ footer {
   margin-inline: auto;
 }
 
-/* Theme toggle button */
 #theme-toggle {
   padding: 10px 20px;
   font-size: 14px;
@@ -279,5 +278,13 @@ main div:not(:first-of-type){
   .gallery img:first-of-type{
     display: none;
   }
-  
+
+  main div{
+    max-width: fit-content;
+    margin-inline: auto;
+  }
+
+  main div:not(:first-of-type){
+    padding-top: 200px;
+  }
 }
